@@ -1,0 +1,56 @@
+.container-main {
+  /* padding-left: 200px;
+  padding-bottom: 50px;
+  padding-right: 200px;
+  padding-top: 50px; */
+  font-family: rubik;
+  background: #ccd1e4;
+}
+
+/* .card-body {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+.card {
+  background: #ffffff;
+} */
+
+.temp {
+  font-family: rubik;
+  font-size: 40px;
+  display: block;
+  color: #2f3a8f;
+}
+.city {
+  display: block;
+  font-family: rubik;
+  font-size: 40px;
+  color: #fe7e6d;
+}
+.weather {
+  display: block;
+  color: #ff9268;
+  font-size: 20 px;
+}
+
+.detailedForecast {
+  color: #2f3a8f;
+  font-size: 12px;
+  padding: 0px;
+  font-family: rubik;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+.percentage-wind {
+  color: #d2647e;
+  font-size: 16px;
+  padding: 0px;
+  font-family: rubik;
+  margin-bottom: 0px;
+}
+.dailyForecast {
+  color: #2f3a8f;
+}
+.emoji {
+  font-size: 22px;
+}
