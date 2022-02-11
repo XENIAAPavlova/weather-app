@@ -36,10 +36,10 @@
 .detailedForecast {
   color: #2f3a8f;
   font-size: 12px;
-  padding: 0px;
+  padding: 10px;
   font-family: rubik;
-  margin-top: 20px;
-  margin-bottom: 0px;
+  /* margin-top: 20px;
+  margin-bottom: 0px; */
 }
 .percentage-wind {
   color: #d2647e;

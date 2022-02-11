@@ -1,4 +1,3 @@
-
 // let now = new Date();
 
 // let days = [

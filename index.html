@@ -22,7 +22,7 @@
     <br />
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-11">
+            <div class="col-8">
 
                 <div class="card shadow-lg p-3 mb-5 bg-body rounded">
                     <div class="card-body">
@@ -38,13 +38,13 @@
                             </div>
                             <br />
                             <div class="row justify-content-md-center">
-                                <div class="col-1">
+                                <div class="col-2">
                                     <button type="submit" value="search" class="btn btn-light" id="search-city">
                                         Search
                                     </button>
                                 </div>
 
-                                <div class="col-1">
+                                <div class="col-2">
                                     <form>
                                         <button type="button" class="btn btn-light" id="current-city">
                                             Current
@@ -57,32 +57,44 @@
                         <div class="row justify-content-md-center">
                             <div class="current-temperature">
                                 <div class="row justify-content-md-center">
-                                    <div class="col-3 rounded mx-3 d-flex flex-column align-items-center border">
-                                        <div class="flex-row p-2 bd-highlight">
+                                    <div class="col-6 rounded mx-3 d-flex flex-column border">
+                                        <div class="flex-row bd-highlight">
                                             
-                                            <div class="col-12 temp" id="see-temperature">15°</div>
+                                            <div class="col-12 temp" id="see-temperature">15<span id="number-celsius"> °C </span> | <span id="number-fahrenheit"> °F </span>    
+</div>
                                         </div>
                                               <div class="switchMetrics">
-        <p>
-            <span id="number-celsius"> °C </span> | <span id="number-fahrenheit"> °F </span>    
-
-        </p>
-      </div>
-                                        <div class="flex-row p-2 bd-highlight">
+            <!-- <span id="number-celsius"> °C </span> | <span id="number-fahrenheit"> °F </span>     -->
+</div>
+                                        <div class="flex-row bd-highlight ">
                                             <div class="col-12 city fw-bold" id="city-name">Lisbon</div>
                                         </div>
-                                        <div class="flex-row p-2 bd-highlight">
-                                            <div class="col-12 time fw-bold" id="current-time">Wednesday 22:40</div>
+                                        <div class="row bd-highlight">
+                                            <div class="col-6 time fw-bold" id="current-time">Wednesday 22:40 </div>
+                                            <div class="col-6 weather" id="weather-description">Sunny</div>
+
                                         </div>
-                                        <div class="flex-row p-2 bd-highlight">
-                                            <div class="col-12 weather" id="weather-description">Sunny</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-3 text-right">
-                                        <img src="visuals/sun_v2.svg" alt width="250">
+                                        <div class="detailedForecast">
+                                    <div class="row justify-content-md-center">
+                                        <!-- <div class="col-2 text-center fw-bold">Precipitation</div> -->
+                                        <div class="col-6 fw-bold">Humidity <span id="humidity-percentages"> 65% </span></div>
+                                        <div class="col-6 fw-bold">Wind <span id="wind-indicator"> 14 km/h </span></div>
                                     </div>
                                 </div>
-                                <div class="detailedForecast">
+
+                                <!-- <div class="percentage-wind"> -->
+                                    <!-- <div class="row justify-content-md-center flex-row p-3 bd-highlight"> -->
+                                        <!-- <div class="col-2 text-center" id="precipitation-percentages">20%</div> -->
+                                        <!-- <div class="col-6" id="humidity-percentages">65%</div> -->
+                                        <!-- <div class="col-6" id="wind-indicator">14 km/h</div> -->
+                                    <!-- </div> -->
+                                <!-- </div> -->
+                                    </div>
+                                    <div class="col-3 text-right">
+                                        <img src="visuals/sun_v2.svg" alt width="200">
+                                    </div>
+                                </div>
+                                <!-- <div class="detailedForecast">
                                     <div class="row justify-content-md-center">
                                         <div class="col-2 text-center fw-bold">Precipitation</div>
                                         <div class="col-2 text-center fw-bold">Humidity</div>
@@ -96,7 +108,7 @@
                                         <div class="col-2 text-center" id="humidity-percentages">65%</div>
                                         <div class="col-2 text-center" id="wind-indicator">14 km/h</div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <br />
                                 <div class="dailyForecast">
                                     <div class="row justify-content-md-center">
@@ -112,7 +124,7 @@
                                                 <div class="col-12">16° | 6°</div>
                                             </div>
                                             <div class="row">
-                                                <div class="col-12"">Sunny</div>
+                                                <div class="col-12">Sunny</div>
                                             </div>
                                         </div>
 
@@ -191,7 +203,7 @@
                     </div>
                     </div>
                     <div class="text-center">
-                    <a href="https://github.com/XENIAAPavlova/weather-app.git">Open-source code</a> by Xenia P</div>
+                    <a href="https://github.com/XENIAAPavlova/weather-app.git" target="_blank">Open-source code</a> by Xenia P</div>
                     <br>    
                       <script src="src/weather.js"></script>
                     <script src="src/weatherAPI.js"></script>

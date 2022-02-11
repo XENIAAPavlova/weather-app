@@ -10,7 +10,7 @@ function returnLocation(response) {
   // 6. программа получает инфо от OW
   let showWeather = document.querySelector("#see-temperature");
   let temperature = Math.round(response.data.main.temp);
-  showWeather.innerHTML = `${temperature}°`;
+  showWeather.innerHTML = `${temperature} °C | °F`;
 
   let showCity = document.querySelector("#city-name");
   showCity.innerHTML = response.data.name;
@@ -62,5 +62,3 @@ function clickCurrent(event) {
 
 let currentButton = document.querySelector("#current-city");
 currentButton.addEventListener("click", clickCurrent);
-
-
