@@ -1,56 +1,36 @@
 .container-main {
-  /* padding-left: 200px;
-  padding-bottom: 50px;
-  padding-right: 200px;
-  padding-top: 50px; */
   font-family: rubik;
-  background: #ccd1e4;
+  background: #ffd460;
 }
-
-/* .card-body {
-  padding-bottom: 40px;
-  padding-top: 40px;
-}
-.card {
-  background: #ffffff;
-} */
-
 .temp {
   font-family: rubik;
   font-size: 40px;
   display: block;
-  color: #2f3a8f;
+  color: #2d4059;
 }
 .city {
   display: block;
-  /* text-align: center; */
   font-family: rubik;
   font-size: 40px;
-  color: #fe7e6d;
+  color: #ea5455;
 }
 .weather {
   display: block;
-  color: #ff9268;
+  color: #f07b3f;
   font-size: 20 px;
 }
 
 .detailedForecast {
-  color: #2f3a8f;
+  color: #2d4059;
   font-size: 12px;
   padding: 10px;
   font-family: rubik;
-  /* margin-top: 20px;
-  margin-bottom: 0px; */
 }
-.percentage-wind {
+.wind-indicator {
   color: #d2647e;
-  font-size: 16px;
-  padding: 0px;
-  font-family: rubik;
-  margin-bottom: 0px;
 }
 .dailyForecast {
-  color: #2f3a8f;
+  color: #2d4059;
 }
 .emoji {
   font-size: 22px;
@@ -59,8 +39,12 @@
   display: block;
   text-align: center;
 }
+#city-name {
+  display: block;
+  padding-left: 20px;
+}
 #current-time {
-  color: #2f3a8f;
+  color: #2d4059;
   font-size: 14px;
   padding-left: 20px;
   padding-top: 0px;
@@ -70,6 +54,6 @@
   color: #d2647e;
   font-size: 14px;
   text-transform: capitalize;
-  padding-top: 0px;
+  padding-left: 20px;
   font-family: rubik;
 }
