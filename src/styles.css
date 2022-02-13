@@ -23,6 +23,7 @@
 }
 .city {
   display: block;
+  /* text-align: center; */
   font-family: rubik;
   font-size: 40px;
   color: #fe7e6d;
@@ -53,4 +54,22 @@
 }
 .emoji {
   font-size: 22px;
+}
+#see-temperature {
+  display: block;
+  text-align: center;
+}
+#current-time {
+  color: #2f3a8f;
+  font-size: 14px;
+  padding-left: 20px;
+  padding-top: 0px;
+  font-family: rubik;
+}
+#weather-description {
+  color: #d2647e;
+  font-size: 14px;
+  text-transform: capitalize;
+  padding-top: 0px;
+  font-family: rubik;
 }
