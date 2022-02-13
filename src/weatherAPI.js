@@ -26,6 +26,13 @@ function returnLocation(response) {
 
   let showWeatherDescription = document.querySelector("#weather-description");
   showWeatherDescription.innerHTML = response.data.weather[0].description;
+  console.log(response);
+
+  let weatherIconElement = document.querySelector("#weather-icon");
+  weatherIconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 // 1. Пользователь вводит город в input
@@ -42,10 +49,6 @@ function enterTheCity(event) {
 
 let submitButton = document.querySelector("#search-city");
 submitButton.addEventListener("click", enterTheCity);
-
-/*
- *
- */
 
 function retrievePosition(position) {
   let lat = position.coords.latitude;
