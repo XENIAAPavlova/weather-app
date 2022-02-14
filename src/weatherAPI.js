@@ -31,8 +31,16 @@ function returnLocation(response) {
   let weatherIconElement = document.querySelector("#weather-icon");
   weatherIconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    changeTheIcon(response.data.weather[0].description)
   );
+}
+// дать аргумент с open weather и передать иконку в зависимости от описания в open weather
+
+function changeTheIcon(icon) {
+  if (icon === "clear sky") {
+    return "visuals/sun_v2.svg";
+  }
+  return "visuals/sun_cloud.svg";
 }
 
 // 1. Пользователь вводит город в input
