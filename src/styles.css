@@ -1,7 +1,11 @@
+body {
+  background: #ffd460;
+}
+
 .container-main {
   font-family: rubik;
   background: #ffd460;
-  box-shadow: -1px 2px 43px 32px rgba(193, 117, 49, 0.3);
+  /* box-shadow: -1px 2px 43px 32px rgba(193, 117, 49, 0.3); */
 }
 .temp {
   font-family: rubik;
@@ -13,7 +17,6 @@
   display: block;
   font-family: rubik;
   font-size: 40px;
-  color: #ea5455;
 }
 .weather {
   display: block;
@@ -24,11 +27,13 @@
 .detailedForecast {
   color: #2d4059;
   font-size: 12px;
-  padding: 10px;
   font-family: rubik;
 }
-.wind-indicator {
-  color: #d2647e;
+#wind-indicator {
+  color: #f07b3f;
+}
+#humidity-percentages {
+  color: #f07b3f;
 }
 .dailyForecast {
   color: #2d4059;
@@ -42,7 +47,9 @@
 }
 #city-name {
   display: block;
-  padding-left: 20px;
+  text-align: center;
+  color: #f07b3f;
+  /* padding-left: 20px; */
 }
 #current-time {
   color: #2d4059;
@@ -52,7 +59,7 @@
   font-family: rubik;
 }
 #weather-description {
-  color: #d2647e;
+  color: #f07b3f;
   font-size: 14px;
   text-transform: capitalize;
   padding-left: 20px;

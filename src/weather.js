@@ -1,34 +1,34 @@
-// let now = new Date();
+let now = new Date();
 
-// let days = [
-//   "Sunday",
-//   "Monday",
-//   "Tuesday",
-//   "Wednesday",
-//   "Thursday",
-//   "Friday",
-//   "Saturday",
-// ];
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 
-// let currentDay = days[now.getDay()];
-// console.log(currentDay);
+let currentDay = days[now.getDay()];
+console.log(currentDay);
 
-// let currentHours = now.getHours();
-// console.log(currentHours);
+let currentHours = now.getHours();
+console.log(currentHours);
 
-// let currentMinutes = now.getMinutes();
-// console.log(currentMinutes);
+let currentMinutes = now.getMinutes();
+if (currentMinutes < 10) {
+  currentMinutes = `0${currentMinutes}`;
+}
+console.log(currentMinutes);
 
-// let todays = `${currentDay}, ${currentHours} : ${currentMinutes}`;
-// console.log(todays);
+let todays = `${currentDay}, ${currentHours} : ${currentMinutes}`;
+console.log(todays);
 
-// function formateTime(actualTime) {
-//   alert("");
-// }
-// let element = document.querySelector("#current-time");
-// console.log(element);
+let element = document.querySelector("#current-time");
+console.log(element);
 
-// element.innerHTML = todays;
+element.innerHTML = todays;
 
 // function search(event) {
 //   event.preventDefault();

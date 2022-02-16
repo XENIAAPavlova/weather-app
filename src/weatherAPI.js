@@ -31,14 +31,35 @@ function returnLocation(response) {
   let weatherIconElement = document.querySelector("#weather-icon");
   weatherIconElement.setAttribute(
     "src",
-    changeTheIcon(response.data.weather[0].description)
+    changeTheIcon(response.data.weather[0].main)
   );
 }
 // дать аргумент с open weather и передать иконку в зависимости от описания в open weather
 
-function changeTheIcon(icon) {
-  if (icon === "clear sky") {
+function changeTheIcon(weatherSummary) {
+  if (weatherSummary === "Clear") {
     return "visuals/sun_v2.svg";
+  }
+  if (weatherSummary === "few clouds") {
+    return "visuals/simple_cloud.svg";
+  }
+  if (weatherSummary === "scattered clouds") {
+    return "visuals/simple_cloud.svg";
+  }
+  if (weatherSummary === "broken clouds") {
+    return "visuals/simple_cloud.svg";
+  }
+  if (weatherSummary === "Drizzle") {
+    return "visuals/day_rain.svg";
+  }
+  if (weatherSummary === "Rain") {
+    return "visuals/drops.svg";
+  }
+  if (weatherSummary === "Thunderstorm") {
+    return "visuals/cloud_storm.svg";
+  }
+  if (weatherSummary === "snow") {
+    return "visuals/snow.svg";
   }
   return "visuals/sun_cloud.svg";
 }
