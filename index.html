@@ -26,93 +26,99 @@
     <div class="container-main">
       <br />
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-8">
-            <div class="card shadow-lg p-3 mb-5 bg-body rounded">
-              <div class="card-body">
-                <form id="submit-button">
-                  <div class="row justify-content-md-center">
-                    <div class="col-10">
-                      <div class="input-group mb-3">
-                        <input
-                          type="text"
-                          id="search-city-input"
-                          class="form-control"
-                          aria-label="Default"
-                          aria-describedby="inputGroup-sizing-default"
-                          autocomplete="off"
-                          autofocus="on"
-                          placeholder="Enter the city"
-                        />
+        <div class="wrapping">
+          <div class="row justify-content-center">
+            <div class="col-8">
+              <div
+                class="card shadow-lg p-3 mb-5 bg-body rounded"
+                id="card-background"
+              >
+                <div class="card-body">
+                  <form id="submit-button">
+                    <div class="row justify-content-md-center">
+                      <div class="col-10">
+                        <div class="input-group mb-3">
+                          <input
+                            type="text"
+                            id="search-city-input"
+                            class="form-control"
+                            aria-label="Default"
+                            aria-describedby="inputGroup-sizing-default"
+                            autocomplete="off"
+                            autofocus="on"
+                            placeholder="Enter the city"
+                          />
+                        </div>
                       </div>
                     </div>
-                  </div>
+                    <br />
+                    <div class="row justify-content-md-center">
+                      <div class="col-2">
+                        <button
+                          type="submit"
+                          value="search"
+                          class="btn btn-light"
+                          id="search-city"
+                        >
+                          Search
+                        </button>
+                      </div>
+
+                      <div class="col-2">
+                        <form>
+                          <button
+                            type="button"
+                            class="btn btn-light"
+                            id="current-city"
+                          >
+                            Current
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </form>
                   <br />
                   <div class="row justify-content-md-center">
-                    <div class="col-2">
-                      <button
-                        type="submit"
-                        value="search"
-                        class="btn btn-light"
-                        id="search-city"
-                      >
-                        Search
-                      </button>
-                    </div>
-
-                    <div class="col-2">
-                      <form>
-                        <button
-                          type="button"
-                          class="btn btn-light"
-                          id="current-city"
+                    <div class="current-temperature">
+                      <div class="row justify-content-md-center">
+                        <div
+                          class="col-6 rounded mx-3 d-flex flex-column border"
                         >
-                          Current
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-                </form>
-                <br />
-                <div class="row justify-content-md-center">
-                  <div class="current-temperature">
-                    <div class="row justify-content-md-center">
-                      <div class="col-6 rounded mx-3 d-flex flex-column border">
-                        <div class="flex-row bd-highlight">
-                          <br />
+                          <div class="flex-row bd-highlight">
+                            <br />
 
-                          <div class="col-12 temp" id="see-temperature">
-                            15<span id="number-metrics"> °C </span> |
-                            <span id="number-fahrenheit"> °F </span>
+                            <div class="col-12 temp" id="see-temperature">
+                              15<span id="number-metrics"> °C </span> |
+                              <span id="number-fahrenheit"> °F </span>
+                            </div>
+                          </div>
+                          <div class="row bd-highlight">
+                            <div class="col-12 city fw-bold" id="city-name">
+                              Lisbon
+                            </div>
+                          </div>
+                          <div class="row bd-highlight">
+                            <div class="col-6 time fw-bold" id="current-time">
+                              Wednesday 22:40
+                            </div>
+                            <div class="col-6 detailedForecast">
+                              Humidity
+                              <span id="humidity-percentages"> 65% </span>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div
+                              class="col-6 weather fw-bold"
+                              id="weather-description"
+                            >
+                              Sunny
+                            </div>
+                            <div class="col-6 detailedForecast">
+                              Wind <span id="wind-indicator"> 14 km/h </span>
+                            </div>
                           </div>
                         </div>
-                        <div class="row bd-highlight">
-                          <div class="col-12 city fw-bold" id="city-name">
-                            Lisbon
-                          </div>
-                        </div>
-                        <div class="row bd-highlight">
-                          <div class="col-6 time fw-bold" id="current-time">
-                            Wednesday 22:40
-                          </div>
-                          <div class="col-6 detailedForecast">
-                            Humidity
-                            <span id="humidity-percentages"> 65% </span>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div
-                            class="col-6 weather fw-bold"
-                            id="weather-description"
-                          >
-                            Sunny
-                          </div>
-                          <div class="col-6 detailedForecast">
-                            Wind <span id="wind-indicator"> 14 km/h </span>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- <div class="detailedForecast">
+                        <!-- <div class="detailedForecast">
                                     <div class="row">
                                         <div class="col-12 fw-bold">Humidity <span id="humidity-percentages"> 65% </span></div>
 																		<div class="row">
@@ -120,16 +126,17 @@
                                     </div>
 																		</div>
                                 </div> -->
-                      <div class="col-3 text-right">
-                        <img
-                          src="visuals/sun_v2.svg"
-                          alt
-                          width="200"
-                          id="weather-icon"
-                        />
+                        <div class="col-3 text-right">
+                          <img
+                            src="visuals/sun_v2.svg"
+                            alt
+                            width="200"
+                            id="weather-icon"
+                          />
+                        </div>
                       </div>
+                      <br />
                     </div>
-                    <br />
                   </div>
                   <br />
                   <div class="dailyForecast">
