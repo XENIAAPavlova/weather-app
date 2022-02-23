@@ -102,26 +102,35 @@ let currentButton = document.querySelector("#current-city");
 currentButton.addEventListener("click", clickCurrent);
 
 function displayForecast(response) {
-  console.log(response.data.daily);
+  console.log(response);
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row justify-content-md-center">`;
-  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
-  days.forEach(function (day) {
+
+  // let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `
 <div class="col-2 day 1 text-center border rounded mx-2">
     <div class="row">
-        <div class="col-12 fw-bold">${day}</div>
+        <div class="col-12 fw-bold">${forecastDay.dt}</div>
     </div>
     <div class="row">
         <div class="col-12 emoji">
-            <img src="visuals/sun_v2.svg" alt width="50" />
+            <img src=${changeTheIcon(
+              forecastDay.weather[0].description
+            )} alt width="50" />
         </div>
     </div>
     <div class="weather-forecast-temperatures">
-        <span class="weather-forecast-temperature-max"> 17° </span> |
-        <span class="weather-forecast-temperature-min"> 12° </span>
+        <span class="weather-forecast-temperature-max">${
+          forecastDay.temp.max
+        }°</span> |
+        <span class="weather-forecast-temperature-min">${
+          forecastDay.temp.min
+        }°</span>
     </div>
     <div class="row">
         <div class="col-12">Sunny</div>
