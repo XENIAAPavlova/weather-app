@@ -94,3 +94,35 @@ function clickCurrent(event) {
 
 let currentButton = document.querySelector("#current-city");
 currentButton.addEventListener("click", clickCurrent);
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row justify-content-md-center">`;
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+<div class="col-2 day 1 text-center border rounded mx-2">
+    <div class="row">
+        <div class="col-12 fw-bold">${day}</div>
+    </div>
+    <div class="row">
+        <div class="col-12 emoji">
+            <img src="visuals/sun_v2.svg" alt width="50" />
+        </div>
+    </div>
+    <div class="weather-forecast-temperatures">
+        <span class="weather-forecast-temperature-max"> 17° </span> |
+        <span class="weather-forecast-temperature-min"> 12° </span>
+    </div>
+    <div class="row">
+        <div class="col-12">Sunny</div>
+    </div>
+</div>
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+displayForecast();
