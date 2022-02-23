@@ -1,10 +1,14 @@
 let apiKey = "dcfba56f795371b9b39f70882499c480";
 // let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${locationInput.value}&appid=${apiKey}&units=metric`;
 
-console.log("Hello");
-
 // 4. инфо передаеттся в open weather
 // 5. open weather ищет инфо о погоде
+function receiveForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "dcfba56f795371b9b39f70882499c480";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
 
 function returnLocation(response) {
   // 6. программа получает инфо от OW
@@ -33,7 +37,10 @@ function returnLocation(response) {
     "src",
     changeTheIcon(response.data.weather[0].main)
   );
+
+  receiveForecast(response.data.coord);
 }
+
 // дать аргумент с open weather и передать иконку в зависимости от описания в open weather
 
 function changeTheIcon(weatherSummary) {
@@ -84,7 +91,6 @@ function retrievePosition(position) {
   let lon = position.coords.longitude;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(returnLocation);
-  console.log(position);
 }
 
 function clickCurrent(event) {
@@ -95,7 +101,8 @@ function clickCurrent(event) {
 let currentButton = document.querySelector("#current-city");
 currentButton.addEventListener("click", clickCurrent);
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row justify-content-md-center">`;
   let days = ["Wed", "Thu", "Fri", "Sat", "Sun"];
@@ -125,4 +132,4 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-displayForecast();
+// displayForecast();

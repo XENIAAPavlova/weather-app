@@ -26,11 +26,8 @@ let todays = `${currentDay}, ${currentHours} : ${currentMinutes}`;
 console.log(todays);
 
 let element = document.querySelector("#current-time");
-console.log(element);
 
 element.innerHTML = todays;
-
-
 
 // function search(event) {
 //   event.preventDefault();
