@@ -41,6 +41,7 @@ function returnLocation(response) {
   receiveForecast(response.data.coord);
 }
 
+
 // дать аргумент с open weather и передать иконку в зависимости от описания в open weather
 
 function changeTheIcon(weatherSummary) {
@@ -101,6 +102,7 @@ function clickCurrent(event) {
 let currentButton = document.querySelector("#current-city");
 currentButton.addEventListener("click", clickCurrent);
 
+
 function formatDay(timestamp) {
   let date = new Date(timestamp*1000);
   let day = date.getDay();
@@ -137,7 +139,7 @@ function displayForecast(response) {
         <span class="weather-forecast-temperature-min">${Math.round(forecastDay.temp.min)}°</span>
     </div>
     <div class="row">
-        <div class="col-12">Sunny</div>
+        <div class="col-12">${forecastDay.weather[0].main}</div>
     </div>
 </div>
   `;}
