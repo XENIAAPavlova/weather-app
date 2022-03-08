@@ -45,7 +45,7 @@ function returnLocation(response) {
 // дать аргумент с open weather и передать иконку в зависимости от описания в open weather
 
 function changeTheIcon(weatherSummary) {
-  if (weatherSummary === "Clear") {
+  if (weatherSummary === "clear") {
     return "visuals/sun_v2.svg";
   }
   if (weatherSummary === "few clouds") {
@@ -57,17 +57,17 @@ function changeTheIcon(weatherSummary) {
   if (weatherSummary === "broken clouds") {
     return "visuals/simple_cloud.svg";
   }
-  if (weatherSummary === "Drizzle") {
+  if (weatherSummary === "drizzle") {
     return "visuals/day_rain.svg";
   }
-  if (weatherSummary === "Rain") {
+  if (weatherSummary === "rain") {
     return "visuals/drops.svg";
   }
-  if (weatherSummary === "Thunderstorm") {
+  if (weatherSummary === "thunderstorm") {
     return "visuals/cloud_storm.svg";
   }
   if (weatherSummary === "snow") {
-    return "visuals/snow.svg";
+    return "visuals/cloud-snow.svg";
   }
   return "visuals/sun_cloud.svg";
 }
