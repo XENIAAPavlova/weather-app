@@ -45,29 +45,31 @@ function returnLocation(response) {
 // дать аргумент с open weather и передать иконку в зависимости от описания в open weather
 
 function changeTheIcon(weatherSummary) {
-  if (weatherSummary === "clear") {
+console.log(weatherSummary);
+
+  if (weatherSummary === "Clear") {
     return "visuals/sun_v2.svg";
   }
-  if (weatherSummary === "few clouds") {
+  if (weatherSummary === "Few clouds") {
     return "visuals/simple_cloud.svg";
   }
-  if (weatherSummary === "scattered clouds") {
+  if (weatherSummary === "Scattered clouds") {
     return "visuals/simple_cloud.svg";
   }
-  if (weatherSummary === "broken clouds") {
+  if (weatherSummary === "Broken clouds") {
     return "visuals/simple_cloud.svg";
   }
-  if (weatherSummary === "drizzle") {
+  if (weatherSummary === "Drizzle") {
     return "visuals/day_rain.svg";
   }
-  if (weatherSummary === "rain") {
+  if (weatherSummary === "Rain") {
     return "visuals/drops.svg";
   }
-  if (weatherSummary === "thunderstorm") {
+  if (weatherSummary === "Thunderstorm") {
     return "visuals/cloud_storm.svg";
   }
-  if (weatherSummary === "snow") {
-    return "visuals/cloud-snow.svg";
+  if (weatherSummary === "Snow") {
+    return "visuals/snow.svg";
   }
   return "visuals/sun_cloud.svg";
 }
@@ -123,23 +125,23 @@ function displayForecast(response) {
     forecastHTML =
       forecastHTML +
       `
-<div class="col-2 day 1 text-center border rounded mx-2">
+<div class="col-2 p-2 day 1 text-center border rounded mx-2">
     <div class="row">
-        <div class="col-12 fw-bold">${formatDay(forecastDay.dt)}</div>
+        <div class="col-12 p-1 fw-bold">${formatDay(forecastDay.dt)}</div>
     </div>
     <div class="row">
         <div class="col-12 emoji">
             <img src=${changeTheIcon(
-              forecastDay.weather[0].description
-            )} alt width="50" />
+              forecastDay.weather[0].main
+            )} alt width="30" />
         </div>
     </div>
-    <div class="weather-forecast-temperatures">
+    <div class=" p-2 weather-forecast-temperatures">
         <span class="weather-forecast-temperature-max">${Math.round(forecastDay.temp.max)}°</span> |
         <span class="weather-forecast-temperature-min">${Math.round(forecastDay.temp.min)}°</span>
     </div>
     <div class="row">
-        <div class="col-12">${forecastDay.weather[0].main}</div>
+        <div class="col-12 p-2">${forecastDay.weather[0].main}</div>
     </div>
 </div>
   `;}
